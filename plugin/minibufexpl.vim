@@ -614,10 +614,6 @@ function! <SID>StartExplorer(curBufNum)
   set filetype=minibufexpl
 
   " !!! We may want to make the following optional -- Bindu
-  " New windows don't cause all windows to be resized to equal sizes
-  set noequalalways
-
-  " !!! We may want to make the following optional -- Bindu
   " We don't want the mouse to change focus without a click
   set nomousefocus
 
@@ -1183,9 +1179,7 @@ function! <SID>ResizeWindow()
 
     let saved_ead = &ead
     let &ead = 'ver'
-    set equalalways
     let &ead = saved_ead
-    set noequalalways
 
   " Vertical Resize
   else
@@ -1209,9 +1203,7 @@ function! <SID>ResizeWindow()
 
     let saved_ead = &ead
     let &ead = 'hor'
-    set equalalways
     let &ead = saved_ead
-    set noequalalways
 
   endif
 
